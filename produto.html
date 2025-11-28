@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página Produto</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body{font-family:Arial, sans-serif;}
+    .breadcrumb a{color:#555;text-decoration:none;}
+    .price-old{text-decoration:line-through;color:#999;}
+    .thumb{border:1px solid #eee;padding:5px;border-radius:6px;cursor:pointer;}
+    .section-box{border-top:1px solid #eee;padding:20px 0;cursor:pointer;}
+    .promo-box{background:#f7f7f7;border-radius:10px;padding:40px;margin-top:40px;}
+  </style>
+</head>
+<body>
+  <div class="container-fluid border-bottom py-3">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-2">
+        <span class="fw-bold">@ Your Company</span>
+      </div>
+      <input class="form-control w-50" placeholder="Search products...">
+      <div class="d-flex align-items-center gap-4">
+        <span>Shipping</span>
+        <span>Returns & Warranty</span>
+        <span>Contact</span>
+        <span class="d-flex align-items-center gap-1"><i class="bi bi-person"></i>Login</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid border-bottom">
+    <div class="container py-2 d-flex gap-4">
+      <span>Products</span>
+      <span>SALE</span>
+      <span>Inspiration</span>
+      <span>Brands</span>
+      <span>Outlet</span>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="breadcrumb small mb-3">
+      <a href="#">All Products</a> › <a href="#">Category</a> › <a href="#">Subcategory</a>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-md-7">
+        <div class="border" style="height:380px;border-radius:10px;background:#f3f3f3;"></div>
+        <div class="d-flex gap-3 mt-3">
+          <div class="thumb" style="width:80px;height:60px;background:#eee;"></div>
+          <div class="thumb" style="width:80px;height:60px;background:#eee;"></div>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <h5>Product Name</h5>
+        <p class="small text-muted">Short description, color, size</p>
+
+        <h4 class="fw-bold">$95 <span class="price-old">$119</span> -20%</h4>
+        <div class="small text-muted">$75.50 excl. taxes</div>
+
+        <div class="my-3 d-flex align-items-center gap-2">
+          ⭐⭐⭐⭐☆ <span class="small text-muted">(12)</span>
+        </div>
+
+        <label class="small text-muted mb-1">Color:</label>
+        <div class="border p-2 rounded small d-flex justify-content-between">
+          Black <a href="#">Change</a>
+        </div>
+
+        <button class="btn btn-dark w-100 mt-3 py-2">🛒 ADD TO CART</button>
+
+        <div class="small text-muted mt-2">
+          <span>● Available</span> &nbsp; &nbsp;
+          <span>Shipping within 3-4 days</span>
+        </div>
+
+        <ul class="small mt-3">
+          <li>Lorem ipsum dolor sit amet</li>
+          <li>Consectetur adipiscing elit</li>
+          <li>Nulla quam velit, vulputate eu pharetra nec</li>
+          <li>Mattis ac neque</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-box d-flex justify-content-between">
+      <span class="fw-bold">Product Details</span> <span>›</span>
+    </div>
+
+    <div class="section-box d-flex justify-content-between">
+      <span class="fw-bold">Size & Measurements</span> <span>›</span>
+    </div>
+
+    <div class="section-box d-flex justify-content-between">
+      <span class="fw-bold">Reviews</span> <span>›</span>
+    </div>
+
+    <h5 class="mt-5">Related products</h5>
+
+    <div class="row row-cols-5 g-4 mt-1">
+      <div class="col">
+        <div class="border rounded" style="background:#eee;height:150px"></div>
+        <div class="small mt-2">Product Name</div>
+        <div class="small text-muted">Description, color, size</div>
+        <div class="fw-bold">$95</div>
+      </div>
+      <div class="col">
+        <div class="border rounded" style="background:#eee;height:150px"></div>
+        <div class="small mt-2">Product Name</div>
+        <div class="small text-muted">Description, color, size</div>
+        <div class="fw-bold">$95</div>
+      </div>
+      <div class="col">
+        <div class="border rounded" style="background:#eee;height:150px"></div>
+        <div class="small mt-2">Product Name</div>
+        <div class="small text-muted">Description, color, size</div>
+        <div class="fw-bold">$95</div>
+      </div>
+      <div class="col">
+        <div class="border rounded" style="background:#eee;height:150px"></div>
+        <div class="small mt-2">Product Name</div>
+        <div class="small text-muted">Description, color, size</div>
+        <div class="fw-bold">$95</div>
+      </div>
+      <div class="col">
+        <div class="border rounded position-relative" style="background:#eee;height:150px">
+          <button class="btn btn-light position-absolute top-50 end-0 translate-middle">›</button>
+        </div>
+        <div class="small mt-2">Product Name</div>
+        <div class="small text-muted">Description, color, size</div>
+        <div class="fw-bold">$95</div>
+      </div>
+    </div>
+
+    <div class="promo-box mt-5 text-center">
+      <h4 class="fw-bold">Brand promo box</h4>
+      <p class="small text-muted">UP TO</p>
+      <h1 class="fw-bold">25%</h1>
+      <p class="small">discount on all products from Brand</p>
+      <button class="btn btn-dark px-4 mt-2">SHOP NOW</button>
+    </div>
+  </div>
+
+  <div class="container-fluid border-top mt-5 py-4">
+    <div class="container d-flex justify-content-between small">
+      <div>
+        <div class="fw-bold mb-2">Need help?</div>
+        <button class="btn btn-dark btn-sm">Contact Us</button>
+      </div>
+
+      <div>
+        <div class="fw-bold mb-2">Customer Support</div>
+        <div>Returns & Warranty</div>
+        <div>Payments</div>
+        <div>Shipping</div>
+        <div>Terms of Service</div>
+        <div>Privacy Policy</div>
+      </div>
+
+      <div>
+        <div class="fw-bold mb-2">Corporate Info</div>
+        <div>About Us</div>
+        <div>Brands</div>
+        <div>Affiliates</div>
+        <div>Investors</div>
+        <div>Cookies</div>
+      </div>
+
+      <div>
+        <div class="fw-bold mb-2">Gift Card</div>
+        <div>Buy Gift Cards</div>
+        <div>Redeem Card</div>
+      </div>
+
+      <div>
+        <div class="fw-bold mb-2">Location</div>
+        <div>United States</div>
+        <div class="mt-3">Icons</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

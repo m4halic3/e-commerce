@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+
+/* ================= VARIÁVEIS ================= */
+:root {
+    --lavender-mist: #f4effa;
+    --dark-amethyst: #2f184b;
+    --indigo-velvet: #532b88;
+    --lavender-purple: #9b72cf;
+    --wisteria: rgb(138, 108, 175);
+}
+
+/* ================= BASE ================= */
+body {
+    background: var(--lavender-mist);
+    font-family: "Raleway", sans-serif;
+    color: var(--dark-amethyst);
+    line-height: 1.5;
+}
+
+/* ================= HEADER ================= */
+.custom-header {
+    background: white;
+    border-bottom: 1px solid var(--wisteria);
+}
+
+.header-link {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--indigo-velvet);
+    font-weight: 500;
+}
+
+.header-link:hover {
+    color: var(--dark-amethyst);
+}
+
+/* ================= CARDS ================= */
+.cart-card,
+.summary-box {
+    background: white;
+    border-radius: 14px;
+    padding: 22px;
+    border: 1px solid var(--wisteria);
+    box-shadow: 0 2px 6px rgba(47, 24, 75, 0.1);
+}
+
+.product-img {
+    background: var(--wisteria);
+    width: 110px;
+    height: 110px;
+    border-radius: 12px;
+    opacity: 0.9;
+}
+
+.quantity-input {
+    width: 55px;
+    height: 32px;
+    text-align: center;
+    border: 1px solid var(--wisteria);
+    border-radius: 6px;
+}
+
+.discount-btn {
+    background: #ffffff;
+    border: 2px solid var(--lavender-purple);
+    color: var(--indigo-velvet);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 14px 16px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(47, 24, 75, 0.1);
+}
+
+.discount-btn:hover {
+    background: var(--lavender-purple);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(47, 24, 75, 0.2);
+}
+
+
+.summary-box .btn {
+    background: var(--indigo-velvet);
+    color: #fff;
+    font-weight: 600;
+    padding: 14px 0;
+    border-radius: 12px;
+    transition: all 0.25s ease;
+}
+
+.summary-box .btn:hover {
+    background: var(--lavender-purple);
+}
+
+/* Remove marcador nativo e deixa o summary clicável com cursor */
+details summary {
+list-style: none;
+cursor: pointer;
+outline: none;
+}
+
+/* Firefox: esconder marcador nativo */
+details summary::-webkit-details-marker { display: none; }
+
+/* Layout do summary: texto à esquerda, ícone à direita */
+.details-summary {
+display: flex;
+align-items: center;
+gap: .75rem;
+padding: 1rem 0;
+width: 100%;
+}
+
+/* Ícone de toggle pousado na extremidade direita */
+.details-summary .toggle-icon {
+margin-left: auto; /* empurra pro lado direito */
+transition: transform .22s ease;
+display: inline-flex;
+align-items: center;
+}
+
+/* Rotaciona quando aberto */
+details[open] .details-summary .toggle-icon {
+transform: rotate(180deg);
+}
+
+/* Pequeno estilo do conteúdo interno quando aberto */
+.details-content {
+padding: .5rem 0 1rem 3rem; /* recuo para alinhar com o texto */
+color: #555;
+font-size: .95rem;
+}
+
+/* ====== RODAPÉ ====== */
+.footer-section {
+    background: none; /* remove a caixa branca de fundo */
+    font-size: 0.9rem;
+    padding: 40px 0;
+    border-top: 1px solid #ddd; /* opcional, só pra separar do conteúdo */
+}
+
+.footer-title {
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.footer-links li {
+    margin-bottom: 6px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #555;
+}
+
+.footer-links a:hover {
+    color: #6A0DAD;
+}
+
+.footer-help-btn {
+    background: #3f3f3f;
+    border: none;
+    font-size: 0.85rem;
+    color: white;
+}
+
+.footer-location {
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.dropdown-icon {
+    font-size: 0.75rem;
+    margin-left: 4px;
+}
+
+.footer-social {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-social a {
+    font-size: 28px;
+    color: rgb(95, 41, 161);
+    transition: all .3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--purple);
+    transform: translateY(-3px);
+}
+
+/* ================= IMAGENS DE PRODUTO ================= */
+.product-img {
+    width: 110px; /* tamanho padrão */
+    height: 110px;
+    border-radius: 12px;
+    object-fit: cover; /* garante que a imagem preencha sem distorção */
+    flex-shrink: 0; /* evita encolher em telas pequenas */
+}
+/* ================= RESPONSIVIDADE ================= */
+@media (max-width: 1200px) {
+    .product-img {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 992px) {
+    .cart-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: wrap; /* garante que o conteúdo não quebre */
+        padding: 18px;
+    }
+
+    .text-end {
+        width: 100%;
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    .product-img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .quantity-input {
+        width: 45px;
+        height: 28px;
+    }
+
+    .cart-card {
+        padding: 14px;
+    }
+
+    /* Garante que os textos não estourem a tela */
+    .cart-card h6,
+    .cart-card p {
+        font-size: 0.9rem;
+    }
+}

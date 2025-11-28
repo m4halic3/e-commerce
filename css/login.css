@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+
+/* ================= VARIÁVEIS ================= */
+:root {
+    --lavender-mist: #f4effa;
+    --dark-amethyst: #2f184b;
+    --indigo-velvet: #532b88;
+    --lavender-purple: #9b72cf;
+    --wisteria: rgb(138, 108, 175);
+
+    --neutral-light: #e6e1ee;     /* Bordas suaves */
+    --neutral-gray: #3f3f3f;      /* Botão principal */
+}
+
+/* ================= BASE ================= */
+body {
+    background: var(--lavender-mist);
+    font-family: "Raleway", sans-serif;
+    color: var(--dark-amethyst);
+}
+
+/* ================= HEADER ================= */
+.custom-header {
+    background: white;
+    border-bottom: 1px solid var(--wisteria);
+}
+
+.header-link {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--indigo-velvet);
+    font-weight: 500;
+}
+
+.header-link:hover {
+    color: var(--dark-amethyst);
+}
+
+/* ================= HERO ================= */
+.hero {
+    margin-top: 35px;
+}
+
+.login-title {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.login-subtitle {
+    color: var(--dark-amethyst);
+    opacity: 0.7;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+/* ================= CARD ================= */
+.auth-card {
+    background: white;
+    border-radius: 14px;
+    padding: 32px 38px;
+    width: 380px;
+    border: 1px solid var(--neutral-light);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.form-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+/* INPUTS */
+.auth-input .input-group-text {
+    background: white;
+    border: 1px solid var(--neutral-light);
+    border-right: none;
+    color: var(--indigo-velvet);
+}
+
+.auth-input .form-control {
+    border: 1px solid var(--neutral-light);
+    border-left: none;
+    font-size: 0.95rem;
+    padding: 10px;
+}
+
+.auth-input .form-control:focus {
+    border-color: var(--lavender-purple);
+    box-shadow: none;
+}
+
+/* Forgot password */
+.forgot-link {
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: var(--indigo-velvet);
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* LOGIN BUTTON */
+.btn-login {
+    background: var(--indigo-velvet);
+    color: white;
+    border: none;
+    padding: 10px 0;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: .2s;
+}
+
+.btn-login:hover {
+    background: var(--lavender-purple);
+}
+
+/* Remember me */
+.remember-label {
+    font-size: 0.9rem;
+    opacity: .8;
+}
+
+/* Divider */
+.or-divider {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.or-divider span {
+    padding: 0 10px;
+    font-size: 0.85rem;
+    opacity: .7;
+}
+
+/* GOOGLE BUTTON */
+.btn-google {
+    background: white;
+    border: 1.6px solid var(--dark-amethyst);
+    padding: 10px 0;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    gap: 8px;
+}
+
+.btn-google:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(83, 43, 136, 0.25); /* tom roxo suave da sua paleta */
+}
+
+.google-box {
+    font-weight: 700;
+    background: white;
+    border: 1.5px solid var(--dark-amethyst);
+    width: 26px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.google-text {
+    font-size: 0.9rem;
+}
+
+/* Sign up */
+.signup-text {
+    font-size: 0.85rem;
+    margin-top: 10px;
+}
+
+.signup-link {
+    color: var(--indigo-velvet);
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+/* ====== RODAPÉ ====== */
+.footer-section {
+    background: none; /* remove a caixa branca de fundo */
+    font-size: 0.9rem;
+    padding: 40px 0;
+    border-top: 1px solid #ddd; /* opcional, só pra separar do conteúdo */
+}
+
+.footer-title {
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.footer-links li {
+    margin-bottom: 6px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #555;
+}
+
+.footer-links a:hover {
+    color: #6A0DAD;
+}
+
+.footer-help-btn {
+    background: #3f3f3f;
+    border: none;
+    font-size: 0.85rem;
+    color: white;
+}
+
+.footer-location {
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.dropdown-icon {
+    font-size: 0.75rem;
+    margin-left: 4px;
+}
+
+.footer-social {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-social a {
+    font-size: 28px;
+    color: rgb(95, 41, 161);
+    transition: all .3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--purple);
+    transform: translateY(-3px);
+}

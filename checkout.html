@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./css/checkout.css"> 
+</head>
+<body>
+<!--HEADER-->
+<header class="bg-white border-bottom py-3">
+    <div class="container">
+
+        <!-- LOGO -->
+        <div class="d-flex align-items-center gap-2 mb-2">
+            <img src="img/simbolo.png" alt="Logo Multiverse Outfits" width="40">
+            <span class="fw-bold fs-5">Multiverse</span>
+        </div>
+
+        <!-- LINKS -->
+        <div class="d-flex justify-content-between align-items-center">
+            <a href="home.html" class="header-link d-flex align-items-center gap-2">
+                <i class="bi bi-arrow-left"></i> Voltar para a Loja
+            </a>
+        
+            <a href="#" class="header-link d-flex align-items-center gap-2">
+                <i class="bi bi-question-circle"></i> Suporte ao Cliente
+            </a>
+        </div>
+        
+</header>
+
+<div class="container mb-5">
+  <div class="text-center mb-4">
+    <h2 class="checkout-title">Checkout</h2>
+    <p class="text-muted">Shipping charges and discount codes applied at checkout.</p>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-lg-8">
+
+<!-- CABEÇALHO FORA DA CAIXA -->
+<div class="d-flex justify-content-between align-items-center mb-2">
+  <div class="d-flex align-items-center gap-2">
+    <i class="bi bi-person-circle fs-4"></i>
+    <strong>John Doe</strong>
+  </div>
+
+  <a href="#" class="text-decoration-none small">
+    <i class="bi bi-pencil me-1"></i>Alterar endereço
+  </a>
+</div>
+
+<!-- CAIXA BRANCA COM AS INFORMAÇÕES -->
+<div class="section-box p-4 rounded shadow-sm bg-white">
+
+  <div class="row g-4">
+    <div class="col-md-6">
+      <span class="mini-label">Email</span><br>
+      johndoe@gmail.com
+    </div>
+
+    <div class="col-md-6">
+      <span class="mini-label">Endereço</span><br>
+      Ha******** 32<br>
+      **50 IL*******
+    </div>
+
+    <div class="col-md-6">
+      <span class="mini-label">Telefone</span><br>
+      +1 0******09
+    </div>
+  </div>
+
+</div>
+
+
+<!-- TÍTULO FORA DA CAIXA -->
+<h4 class="fw-semibold mb-3 mt-4">Detalhes de Envio</h4>
+
+<!-- CAIXA DE PRODUTO -->
+<div class="section-box mb-3 p-3">
+
+  <div class="d-flex gap-3">
+
+    <!-- IMAGEM DO PRODUTO -->
+    <img src="./img/camisa1.jpeg" alt="Produto"
+         style="width:80px;height:80px;border-radius:6px;object-fit:cover;">
+
+    <div class="flex-grow-1">
+      <strong>Nome do Produto</strong><br>
+      <span class="mini-label">Descrição, cor, tamanho</span>
+
+      <div class="mt-2 d-flex align-items-center gap-2">
+        <input type="number" value="1" 
+               class="form-control form-control-sm" 
+               style="width:70px;">
+      </div>
+    </div>
+
+    <div class="text-end">
+      <span class="price-original">R$ 95,00</span><br>
+      <span class="price-now">R$ 70,00</span><br>
+      <small class="text-success">Você economiza 25%</small><br>
+      <button class="btn btn-light btn-sm mt-1 border">
+        <i class="bi bi-trash"></i>
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<!-- OPÇÃO 1 – RETIRADA NO PONTO -->
+<div class="section-box p-3 mb-3">
+  <div class="d-flex justify-content-between align-items-center">
+    <div>
+      <input type="radio" name="shipping">
+      Retirada no ponto<br>
+      <small class="mini-label">Envio: 2–4 semanas</small><br>
+      <small class="mini-label">Retirar em: Groceries Kiosk, 35 Illinois St, Toronto</small><br>
+      <a href="#" class="small">Alterar</a>
+    </div>
+    <strong>R$ 16,00</strong>
+  </div>
+</div>
+
+<!-- OPÇÃO 2 – ENTREGA EM DOMICÍLIO -->
+<div class="section-box p-3 mb-3">
+  <div class="d-flex justify-content-between align-items-center">
+    <div>
+      <input type="radio" name="shipping">
+      Entrega em domicílio<br>
+      <small class="mini-label">Envio: 3–5 semanas</small>
+    </div>
+    <strong>R$ 36,00</strong>
+  </div>
+</div>
+
+
+
+<h5 class="fw-semibold mb-3">Pagamento</h5>
+
+<!-- PAYMENT BOX ÚNICO -->
+<div class="payment-box">
+
+  <!-- MÉTODO: CARTÃO -->
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <label class="d-flex align-items-center gap-2">
+      <input type="radio" name="payment" checked> Cartão de Débito / Crédito
+    </label>
+    <i class="bi bi-credit-card"></i>
+  </div>
+
+  <!-- CAMPOS DO CARTÃO -->
+  <input type="text" placeholder="1234 5678 9012 3456" class="form-control mb-2">
+
+  <div class="row g-2 mb-2">
+    <div class="col">
+      <input type="text" placeholder="MM / AA" class="form-control">
+    </div>
+    <div class="col">
+      <input type="text" placeholder="CVC 3 dígitos" class="form-control">
+    </div>
+  </div>
+
+  <input type="text" placeholder="Nome do titular do cartão" class="form-control mb-3">
+
+  <!-- ÍCONES DAS BANDEIRAS -->
+  <div class="d-flex gap-3 mb-3">
+    <i class="bi bi-credit-card fs-3"></i>
+    <i class="bi bi-credit-card fs-3"></i>
+    <i class="bi bi-credit-card-2-back fs-3"></i>
+  </div>
+
+  <small class="text-muted d-block mb-3">
+    <i class="bi bi-lock-fill me-1"></i>
+    Todas as transações são seguras e criptografadas com <strong>SecuritySystem</strong>.
+  </small>
+
+  <hr>
+
+  <!-- MÉTODO: PAYPAL -->
+  <div class="d-flex justify-content-between align-items-center py-2">
+    <label class="d-flex align-items-center gap-2 mb-0">
+      <input type="radio" name="payment"> PayPal
+    </label>
+    <button class="btn btn-light border btn-sm">PayPal</button>
+  </div>
+
+  <hr>
+
+  <!-- MÉTODO: APPLE PAY -->
+  <div class="d-flex justify-content-between align-items-center py-2">
+    <label class="d-flex align-items-center gap-2 mb-0">
+      <input type="radio" name="payment"> Apple Pay
+    </label>
+    <button class="btn btn-light border btn-sm">
+      <i class="bi bi-apple me-1"></i> Pagar
+    </button>
+  </div>
+
+</div>
+
+
+<button id="finalizarCompra" class="btn btn-dark w-100 mt-3 py-2">
+  FINALIZAR COMPRA
+</button>
+
+<p class="text-muted text-center small mt-2">
+  Ao clicar em "Finalizar compra", confirmo que estou ciente e concordo que sou responsável pelo pagamento do meu pedido. 
+  Aceito os Termos e Condições e confirmo que li a Política de Privacidade.
+</p>
+
+<script>
+  document.getElementById("finalizarCompra").addEventListener("click", function() {
+      // redireciona para a página de agradecimento
+      window.location.href = "thanks.html";
+  });
+</script>
+
+
+
+    </div>
+
+     <div class="col-lg-4">
+
+  <!-- Título do Sumário (AGORA FORA DA CAIXA) -->
+  <h6 class="fw-semibold mb-3">Resumo</h6>
+
+  <!-- Caixa branca -->
+  <div class="summary-box">
+    <div class="d-flex justify-content-between mb-2">
+      <span>Itens no carrinho</span>
+      <span>$149.00</span>
+    </div>
+
+    <div class="d-flex justify-content-between mb-2">
+      <span>Frete</span>
+      <span>$16.00</span>
+    </div>
+
+    <div class="d-flex justify-content-between mb-2 discount-text">
+      <span>Economia aplicada</span>
+      <span>-$25.00</span>
+    </div>
+
+    <div class="d-flex justify-content-between mb-2 discount-text">
+      <span>Código de desconto MOQUPS</span>
+      <span>-$24.00</span>
+    </div>
+
+    <hr>
+
+    <div class="d-flex justify-content-between fw-semibold fs-5 mb-3">
+      <span>Total</span>
+      <span>$116.00</span>
+    </div>
+  </div>
+
+    <!-- Caixa de Código de Desconto / Cartão Presente Separada -->
+    <div class="discount-box">
+        <h6 class="fw-semibold">CÓDIGO DE DESCONTO / CARTÃO PRESENTE</h6>
+        <div class="discount-label">Digite seu código</div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="MOQUPS">
+            <button class="btn btn-dark">Aplicar</button>
+        </div>
+        <div class="small text-muted">
+            Tem um cartão presente? Digite o código acima para aplicar seu desconto.
+        </div>
+    </div>
+     </div>
+
+<!-- Rodapé -->
+<footer class="footer-section">
+    <div class="container">
+      <div class="row align-items-start mb-4">
+        <!-- Precisa de ajuda? -->
+        <div class="col-md-3 mb-4">
+          <h6 class="footer-title">Precisa de ajuda?</h6>
+          <button class="btn btn-dark rounded-pill px-4 py-2 footer-help-btn">
+            Contate-nos
+          </button>
+        </div>
+  
+        <!-- Links -->
+        <div class="col-md-9">
+          <div class="row">
+            <!-- Suporte ao Cliente -->
+            <div class="col-md-3 mb-4">
+              <h6 class="footer-title">Suporte ao Cliente</h6>
+              <ul class="list-unstyled footer-links">
+                <li><a href="#">Devoluções & Garantia</a></li>
+                <li><a href="#">Pagamentos</a></li>
+                <li><a href="#">Envio</a></li>
+                <li><a href="#">Termos de Serviço</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+              </ul>
+            </div>
+  
+            <!-- Informações Corporativas -->
+            <div class="col-md-3 mb-4">
+              <h6 class="footer-title">Informações Corporativas</h6>
+              <ul class="list-unstyled footer-links">
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Marcas</a></li>
+                <li><a href="#">Afiliados</a></li>
+                <li><a href="#">Investidores</a></li>
+                <li><a href="#">Cookies</a></li>
+              </ul>
+            </div>
+  
+            <!-- Cartão Presente -->
+            <div class="col-md-3 mb-4">
+              <h6 class="footer-title">Cartão Presente</h6>
+              <ul class="list-unstyled footer-links">
+                <li><a href="#">Comprar Cartões Presente</a></li>
+                <li><a href="#">Resgatar Cartão</a></li>
+              </ul>
+            </div>
+  
+            <!-- Localização -->
+            <div class="col-md-3 mb-4">
+              <h6 class="footer-title">Localização</h6>
+              <div class="d-flex align-items-center gap-2 footer-location">
+                <img src="https://flagcdn.com/br.svg" width="22" class="rounded" alt="Bandeira do Brasil">
+                <span>Brasil</span>
+                <span class="dropdown-icon">▾</span>
+              </div>
+              <div class="footer-social">
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                <a href="#" aria-label="X"><i class="bi bi-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

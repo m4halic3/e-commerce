@@ -1,0 +1,239 @@
+ /* ---------- Vars ---------- */
+ :root{
+    --muted:#7a7a7a;
+    --muted-2:#a9a9a9;
+    --border:#e7e7e7;
+    --brand:#333333;
+    --card-bg:#fafafa;
+    --accent:#f1f1f1;
+    --shadow: 0 6px 18px rgba(20,20,20,0.04);
+  }
+
+  /* ---------- Base ---------- */
+  body{
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: var(--brand);
+    background: #fff;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:1.45;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  .container-lg { max-width:1100px; }
+
+  /* ---------- Top promo bar ---------- */
+  .promo-bar{
+    background:#333;
+    color:#fff;
+    font-size:13px;
+    padding:6px 0;
+    text-align:center;
+  }
+
+  /* ---------- Header ---------- */
+  header.site-header{
+    border-bottom:1px solid var(--border);
+    background:#fff;
+  }
+  .brand {
+    font-weight:700;
+    font-size:18px;
+    display:flex;
+    align-items:center;
+    gap:.6rem;
+  }
+  .brand .logo-circle{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:var(--accent);
+    display:inline-block;
+    border:1px solid var(--border);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    color:var(--muted);
+  }
+
+  /* Search bar */
+.search-wrapper {
+    position: relative;
+  }
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    color: var(--muted);
+    font-size: 18px;
+  }
+  .search-input {
+    padding-left: 42px !important;
+    height: 46px;
+    border-radius: 40px;
+    border: 1px solid #dcdcdc;
+  }
+  
+  /* Contadores nos ícones */
+  .badge-counter {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    background: #333;
+    color: #fff;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 50px;
+    font-weight: 600;
+  }
+  
+  /* Navegação inferior */
+  .nav-lower a {
+    font-size: 15px;
+    color: var(--brand);
+    cursor: pointer;
+  }
+  .nav-lower .nav-link-lower:hover {
+    color: #000;
+  }
+  
+
+  /* ---------- Breadcrumb / Title ---------- */
+  .breadcrumb-custom{
+    padding-top:24px;
+    padding-bottom:8px;
+    color:var(--muted);
+    font-size:14px;
+  }
+  h1.category-title{
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:20px;
+  }
+
+  /* ---------- Subcategories row ---------- */
+  .subcats {
+    display:flex;
+    justify-content: space-between;
+    overflow:auto;
+    padding-bottom:12px;
+  }
+  .subcat {
+    width:120px;
+    min-width:120px;
+    text-align:center;
+    background: #fafafa;
+    padding:16px;
+    border-radius:10px;
+    border:1px solid var(--border);
+  }
+  .subcat .thumb {
+    width:100%;
+    height:72px;
+    background:var(--accent);
+    border-radius:8px;
+    margin-bottom:8px;
+  }
+  .subcat small { color:var(--muted-2); }
+
+  /* ---------- Filters ---------- */
+  .filters-row{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    flex-wrap:wrap;
+    margin:18px 0;
+  }
+  .filter-pill {
+    border-radius:8px;
+    padding:8px 12px;
+    border:1px solid var(--border);
+    background:#fff;
+    font-size:14px;
+  }
+  .filter-pill.active{
+    background:#333;
+    color:#fff;
+    border-color:#333;
+  }
+
+  /* ---------- Product grid ---------- */
+  .products-header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:12px;
+  }
+  .product-grid { 
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap:28px;
+  }
+  @media (max-width:1200px){ .product-grid { grid-template-columns: repeat(4,1fr);} }
+  @media (max-width:992px){ .product-grid { grid-template-columns: repeat(3,1fr);} }
+  @media (max-width:768px){ .product-grid { grid-template-columns: repeat(2,1fr);} }
+  @media (max-width:480px){ .product-grid { grid-template-columns: 1fr; } }
+
+  .product-card {
+    background:transparent;
+    border-radius:8px;
+  }
+  .product-thumb {
+    aspect-ratio: 3/4;
+    background:var(--accent);
+    border-radius:8px;
+    position:relative;
+    box-shadow: var(--shadow);
+    border:1px solid var(--border);
+  }
+  .badge-new {
+    position:absolute;
+    top:10px; left:10px;
+    background:#222; color:#fff;
+    padding:4px 8px; border-radius:6px;
+    font-size:12px;
+  }
+  .product-info { margin-top:10px; }
+  .product-name { font-weight:600; font-size:14px; }
+  .product-meta { color:var(--muted-2); font-size:13px; margin-top:4px; }
+  .product-price { margin-top:8px; font-weight:700; }
+  .product-old { text-decoration:line-through; color:var(--muted-2); font-weight:500; margin-right:8px; }
+  .product-save { color:#1b8a3e; font-weight:600; }
+
+  /* ---------- Show more / pagination ---------- */
+  .show-more-wrap { text-align:center; margin-top:28px; }
+  .progress-mini {
+    height:6px;
+    background:var(--accent);
+    border-radius:99px;
+    overflow:hidden;
+    margin:10px auto;
+    width:200px;
+  }
+  .progress-mini > i { display:block; height:100%; width:35%; background:#333; }
+
+  /* ---------- Reviews / rating ---------- */
+  .reviews {
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:24px;
+    margin-top:48px;
+    margin-bottom:36px;
+  }
+  @media (max-width:992px){ .reviews{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:576px){ .reviews{ grid-template-columns:1fr; } }
+  .review-card { background: #fff; border-radius:8px; padding:18px; border:1px solid var(--border); }
+
+  /* ---------- Footer ---------- */
+  footer.site-footer { border-top:1px solid var(--border); padding-top:36px; padding-bottom:36px; margin-top:48px; background:#fff; }
+  .footer-links a { color:var(--muted); display:block; margin-bottom:8px; font-size:14px; }
+  .contact-cta .btn-dark { border-radius:8px; padding:10px 20px; }
+
+  /* ---------- Misc ---------- */
+  .tiny { font-size:13px; color:var(--muted); }
+  .muted { color:var(--muted); }
+  .divider { height:1px; background:var(--border); margin:18px 0; }
+
+

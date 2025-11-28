@@ -1,0 +1,219 @@
+    /* ================= VARIÁVEIS ================= */
+    :root {
+        --lavender-mist: #f4effa;
+        --dark-amethyst: #2f184b;
+        --indigo-velvet: #532b88;
+        --lavender-purple: #9b72cf;
+        --wisteria: rgb(138, 108, 175);
+
+        --neutral-light: #e6e1ee;     /* Bordas suaves */
+        --neutral-gray: #3f3f3f;      /* Botão principal */
+    }
+
+    /* ================= BASE ================= */
+    body {
+        background: var(--lavender-mist);
+        font-family: "Raleway", sans-serif;
+        color: var(--dark-amethyst);
+        margin: 0;
+    }
+
+    
+/* ================= HEADER ================= */
+.custom-header {
+    background: white;
+    border-bottom: 1px solid var(--wisteria);
+}
+
+.header-link {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--indigo-velvet);
+    font-weight: 500;
+}
+
+.header-link:hover {
+    color: var(--dark-amethyst);
+}
+
+    /* right */
+    .header-right { 
+        color: var(--lavender-purple); 
+        font-weight: 500;
+    }
+
+    /* MAIN AREA */
+    .main-area { 
+        padding: 48px 0 30px; 
+        text-align:center; 
+    }
+
+    /* title */
+    .thank-title { 
+        font-size: 32px; 
+        margin-bottom: 6px; 
+        font-weight: 700;
+        color: var(--dark-amethyst);
+        font-family: "Lora", serif;
+    }
+
+    /* subtitle */
+    .thank-subtitle {
+        color: var(--lavender-purple);
+        font-weight: 400;
+    }
+
+    /* central card */
+    .thank-card {
+        width: 680px;
+        max-width: calc(100% - 40px);
+        margin-top: 18px;
+        margin-bottom: 18px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        display: inline-flex;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+        border: 1px solid var(--neutral-light);
+    }
+
+    /* icon badge - quadrado arredondado com sombra leve */
+    .icon-badge {
+        width: 48px;
+        height: 48px;
+        background: var(--lavender-purple);
+        border-radius: 8px;
+        flex: 0 0 48px;
+        box-shadow: inset 0 0 0 1px rgba(0,0,0,0.02);
+    }
+
+    /* print link style */
+    .print-link {
+        text-decoration: underline;
+        font-weight: 600;
+        color: var(--indigo-velvet);
+    }
+    .print-link:hover {
+        color: var(--dark-amethyst);
+    }
+
+    /* button small dark */
+    .btn-dark {
+        background: var(--indigo-velvet);
+        border-color: var(--indigo-velvet);
+        color: #fff;
+        font-weight: 500;
+        padding: 8px 20px;
+    }
+    .btn-dark:hover { 
+        background: var(--dark-amethyst); 
+        border-color: var(--dark-amethyst); 
+    }
+
+    /* ====== RODAPÉ ====== */
+.footer-section {
+    background: none; /* remove a caixa branca de fundo */
+    font-size: 0.9rem;
+    padding: 40px 0;
+    border-top: 1px solid #ddd; /* opcional, só pra separar do conteúdo */
+}
+
+.footer-title {
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.footer-links li {
+    margin-bottom: 6px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #555;
+}
+
+.footer-links a:hover {
+    color: #6A0DAD;
+}
+
+.footer-help-btn {
+    background: #3f3f3f;
+    border: none;
+    font-size: 0.85rem;
+    color: white;
+}
+
+.footer-location {
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.dropdown-icon {
+    font-size: 0.75rem;
+    margin-left: 4px;
+}
+
+.footer-social {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-social a {
+    font-size: 28px;
+    color: rgb(95, 41, 161);
+    transition: all .3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--purple);
+    transform: translateY(-3px);
+}
+
+    /* Contact button */
+    .btn-contact {
+        background: var(--indigo-velvet);
+        border-color: var(--indigo-velvet);
+        color: #fff;
+        font-weight: 500;
+        padding: 8px 20px;
+    }
+    .btn-contact:hover { 
+        background: var(--dark-amethyst); 
+        border-color: var(--dark-amethyst); 
+    }
+
+    /* Social icons */
+    .social-icons i { 
+        font-size: 18px; 
+        margin-left: 8px; 
+        color: var(--lavender-purple); 
+        transition: color 0.2s;
+    }
+    .social-icons i:hover {
+        color: var(--indigo-velvet);
+        cursor: pointer;
+    }
+
+    /* Responsividade */
+    @media (max-width: 991px) {
+        .thank-card { 
+            width: 100%; 
+            padding: 20px; 
+            flex-direction: column; 
+            align-items: flex-start; 
+        }
+        .icon-badge { 
+            margin-bottom: 12px; 
+        }
+        .header-center { 
+            display: none; 
+        }
+        .site-footer .col-md-4 { 
+            text-align: left !important; 
+        }
+    }

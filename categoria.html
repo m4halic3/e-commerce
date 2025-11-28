@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Category — E-shop</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="./css/categoria.css">
+</head>
+<body>
+
+  <!-- Hidden reference image (local file you uploaded) -->
+  <!-- Usando o caminho do arquivo enviado: /mnt/data/tela2.png -->
+  <img src="/mnt/data/tela2.png" alt="referencia" style="display:none" />
+
+  <!-- Promo bar -->
+  <div class="promo-bar">
+    Free shipping on all orders over $200. For a limited time only.
+  </div>
+
+  <!-- Header -->
+<header class="site-header">
+
+  <!-- Linha principal: logo + busca + ícones -->
+  <div class="container container-lg d-flex align-items-center justify-content-between py-4">
+
+
+      <!-- Logo -->
+      <div class="d-flex align-items-center gap-2">
+        <span class="fs-3"><img src="img/simbolo.png" alt="Logo da empresa Multiverse Outfits" width="40"></span>
+        <span class="fw-bold fs-5">Multiverse</span>
+      </div>
+
+    <!-- Barra de pesquisa -->
+    <div class="flex-grow-1 px-4">
+      <div class="input-group rounded-pill border overflow-hidden">
+        <span class="input-group-text bg-white border-0">
+          🔍
+        </span>
+        <input type="text" class="form-control border-0" placeholder="Pesquisar produtos...">
+      </div>
+    </div>
+
+     <!-- Ícones de ação do usuário -->
+     <div class="d-flex align-items-center gap-4">
+      <div class="position-relative fs-4 header-icon">
+        🤍
+        <span class="badge bg-dark text-white position-absolute top-0 start-100 translate-middle rounded-pill">12</span>
+      </div>
+
+      <div class="d-flex align-items-center gap-1 fs-5 header-icon">
+        👤 <span class="fw-semibold">Login</span>
+      </div>
+
+      <div class="position-relative fs-4 header-icon">
+        🛒
+        <span class="badge bg-dark text-white position-absolute top-0 start-100 translate-middle rounded-pill">2</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navegação principal -->
+  <nav class="bg-white py-2 border-bottom">
+    <div class="container d-flex justify-content-between">
+      <div class="d-flex gap-4">
+        <a href="#" class="text-decoration-none text-dark fw-semibold">Produtos</a>
+        <a href="#" class="text-decoration-none text-dark fw-semibold">Promoção</a>
+        <a href="#" class="text-decoration-none text-dark fw-semibold">Inspiração</a>
+        <a href="#" class="text-decoration-none text-dark fw-semibold">Marcas</a>
+        <a href="#" class="text-decoration-none text-dark fw-semibold">Outlet</a>
+      </div>
+      <div class="d-flex gap-4">
+        <a href="#" class="text-decoration-none text-dark fw-semibold">Envio</a>
+        <a href="#" class="text-decoration-none text-dark fw-semibold">Devoluções & Garantia</a>
+        <a href="#" class="text-decoration-none text-dark fw-semibold">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+
+  <!-- Breadcrumb + Title -->
+  <main class="container container-lg">
+    <div class="breadcrumb-custom mt-4">
+      <a href="#" class="muted"><i class="bi bi-arrow-left me-2"></i>All Products</a>
+    </div>
+
+    <h1 class="category-title">Category Name</h1>
+
+    <!-- Subcategories -->
+    <div class="subcats mb-3" role="list" aria-label="Subcategorias">
+      <div class="subcat" role="listitem">
+        <div class="thumb"></div>
+        <div class="muted">Subcategory</div>
+      </div>
+      <div class="subcat" role="listitem">
+        <div class="thumb"></div>
+        <div class="muted">Subcategory</div>
+      </div>
+      <div class="subcat" role="listitem">
+        <div class="thumb"></div>
+        <div class="muted">Subcategory</div>
+      </div>
+      <div class="subcat" role="listitem">
+        <div class="thumb"></div>
+        <div class="muted">Subcategory</div>
+      </div>
+      <div class="subcat" role="listitem">
+        <div class="thumb"></div>
+        <div class="muted">Subcategory</div>
+      </div>
+      <div class="subcat" role="listitem">
+        <div class="thumb"></div>
+        <div class="muted">Subcategory</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Filters -->
+    <div class="filters-row">
+      <div class="filter-pill"><i class="bi bi-funnel"></i> Sort by</div>
+      <div class="filter-pill active">New Arrivals</div>
+      <div class="filter-pill">Sales</div>
+      <div class="filter-pill">Color ▾</div>
+      <div class="filter-pill">Size ▾</div>
+      <div class="filter-pill">Brand ▾</div>
+      <div class="filter-pill">All filters <i class="bi bi-sliders ms-2"></i></div>
+    </div>
+
+    <!-- Active filter tags -->
+    <div class="mb-3">
+      <span class="filter-pill">New Arrivals <i class="bi bi-x ms-1"></i></span>
+    </div>
+
+    <!-- Products header -->
+    <div class="products-header">
+      <div class="tiny muted">28 Products</div>
+      <div class="tiny"><a href="#" class="muted">Show 10 products ▾</a></div>
+    </div>
+
+    <!-- Product grid -->
+    <section id="product-area">
+      <div id="product-grid" class="product-grid" aria-live="polite">
+        <!-- Cards rendered by JS -->
+      </div>
+
+      <!-- Show more / progress -->
+      <div class="show-more-wrap">
+        <div class="tiny muted mb-2" id="showingText">Showing 10 of 28 products</div>
+        <div class="progress-mini"><i></i></div>
+        <button id="showMoreBtn" class="btn btn-dark mt-3" aria-expanded="false">SHOW MORE</button>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews" aria-label="Customer reviews">
+      <div class="review-card">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <div>
+            <div style="font-weight:700">Our Rating</div>
+            <div class="tiny muted">Based on 2,035 reviews</div>
+          </div>
+          <div style="font-size:20px; font-weight:700">★ ★ ★ ★ ★</div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="fw-semibold">Great value and quality</div>
+        <div class="tiny muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="tiny muted mt-2">John Doe, 6 days ago</div>
+      </div>
+
+      <div class="review-card">
+        <div class="fw-semibold">Beautiful design!</div>
+        <div class="tiny muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="tiny muted mt-2">John Deo, 6 days ago</div>
+      </div>
+
+      <div class="review-card">
+        <div class="fw-semibold">Exactly what I wanted</div>
+        <div class="tiny muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="tiny muted mt-2">John Doe, 6 days ago</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container container-lg">
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <h6 class="fw-bold">Need help?</h6>
+          <div class="contact-cta mt-3">
+            <button class="btn btn-dark">Contact Us</button>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+          <h6 class="fw-bold">Customer Support</h6>
+          <div class="footer-links">
+            <a href="#">Returns & Warranty</a>
+            <a href="#">Payments</a>
+            <a href="#">Shipping</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+
+        <div class="col-md-2 mb-4">
+          <h6 class="fw-bold">Corporate Info</h6>
+          <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Brands</a>
+            <a href="#">Affiliates</a>
+            <a href="#">Investors</a>
+            <a href="#">Cookies</a>
+          </div>
+        </div>
+
+        <div class="col-md-2 mb-4">
+          <h6 class="fw-bold">Gift Card</h6>
+          <div class="footer-links">
+            <a href="#">Buy Gift Cards</a>
+            <a href="#">Redeem Card</a>
+          </div>
+        </div>
+
+        <div class="col-md-2 mb-4 text-end">
+          <h6 class="fw-bold">Location</h6>
+          <div class="tiny muted">🇺🇸 United States</div>
+          <div class="mt-3">
+            <i class="bi bi-instagram me-2"></i>
+            <i class="bi bi-facebook me-2"></i>
+            <i class="bi bi-youtube me-2"></i>
+            <i class="bi bi-twitter"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center tiny muted mt-4">
+        © 2025 Your Company
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    /*******************************************************************
+     * Script: render products (28 items) + "show more" behavior
+     * - This keeps the HTML file manageable (scripts generate the grid)
+     * - Initially shows 10 products, clicking "SHOW MORE" reveals all
+     *******************************************************************/
+    (function(){
+      const totalProducts = 28;
+      const initiallyVisible = 10;
+      const productGrid = document.getElementById('product-grid');
+      const showMoreBtn = document.getElementById('showMoreBtn');
+      const showingText = document.getElementById('showingText');
+
+      // Small helper to create a card element
+      function createProductCard(idx){
+        const wrap = document.createElement('article');
+        wrap.className = 'product-card';
+        wrap.setAttribute('role','article');
+        wrap.setAttribute('aria-label','Product ' + (idx+1));
+
+        const thumb = document.createElement('div');
+        thumb.className = 'product-thumb';
+        // add "NEW" badge for some items
+        if ((idx % 6) === 0) {
+          const b = document.createElement('div');
+          b.className = 'badge-new';
+          b.textContent = 'NEW';
+          thumb.appendChild(b);
+        }
+
+        // product info
+        const info = document.createElement('div');
+        info.className = 'product-info';
+        info.innerHTML = `
+          <div class="product-name">Product Name</div>
+          <div class="product-meta">Description, color, size</div>
+          <div class="d-flex align-items-baseline">
+            <div class="product-price">$95</div>
+          </div>
+        `;
+
+        // assemble
+        wrap.appendChild(thumb);
+        wrap.appendChild(info);
+
+        return wrap;
+      }
+
+      // render all products but hide after initiallyVisible
+      for (let i=0;i<totalProducts;i++){
+        const card = createProductCard(i);
+        if (i >= initiallyVisible) {
+          card.style.display = 'none';
+          card.classList.add('hidden-product');
+        }
+        productGrid.appendChild(card);
+      }
+
+      // update showing text
+      function updateShowingText(visibleCount){
+        showingText.textContent = `Showing ${visibleCount} of ${totalProducts} products`;
+      }
+      updateShowingText(initiallyVisible);
+
+      // Show more toggle
+      let expanded = false;
+      showMoreBtn.addEventListener('click', function(){
+        const hidden = document.querySelectorAll('.hidden-product');
+        if (!expanded){
+          hidden.forEach(n => { n.style.display = ''; n.classList.remove('hidden-product'); });
+          expanded = true;
+          showMoreBtn.textContent = 'SHOW LESS';
+          showMoreBtn.setAttribute('aria-expanded','true');
+          updateShowingText(totalProducts);
+          // expand progress bar visually
+          document.querySelector('.progress-mini > i').style.width = '100%';
+        } else {
+          // hide back to initial
+          const cards = productGrid.children;
+          for (let i=0;i<cards.length;i++){
+            if (i >= initiallyVisible){
+              cards[i].style.display = 'none';
+              cards[i].classList.add('hidden-product');
+            }
+          }
+          expanded = false;
+          showMoreBtn.textContent = 'SHOW MORE';
+          showMoreBtn.setAttribute('aria-expanded','false');
+          updateShowingText(initiallyVisible);
+          document.querySelector('.progress-mini > i').style.width = '35%';
+          // scroll up to product area
+          window.scrollTo({ top: document.getElementById('product-area').offsetTop - 60, behavior: 'smooth' });
+        }
+      });
+
+    })();
+  </script>
+</body>
+</html>
